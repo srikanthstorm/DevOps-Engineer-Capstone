@@ -21,8 +21,12 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh './create_infra_step3.sh'
-            }
-        }
+                  withAWS(region:'us-west-2',credentials:'aws-static') {
+                  sh 'echo "Uploading content with AWS creds"'
+                  sh './create_infra_step3.sh'
+                  }
+              }
+         }
+  
     }
 }
