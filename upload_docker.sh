@@ -11,7 +11,7 @@ dockerpath=stormcode/capstone
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 docker login --username $1 --password $2 
-docker tag capstone $dockerpath:latest
+docker tag stormcode/capstone $dockerpath:latest
 
 # Step 3:
 # Push image to a docker repository
