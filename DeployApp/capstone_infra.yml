@@ -37,6 +37,7 @@ Resources:
         SecurityGroups:
         - Ref: WebServerSecGroup
         InstanceType: t3.micro
+        KeyName : EssentialKeyPair
         BlockDeviceMappings:
         - DeviceName: "/dev/sdk"
           Ebs:
